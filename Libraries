@@ -1,0 +1,13 @@
+Expo Location: Accessing location data including GPS coordinates.
+Expo Camera: Integrating camera functionality for photos and videos.
+Expo Image Picker: Accessing the system's image library and camera roll.
+Expo Notifications: Handling push notifications.
+Expo Sensors: Access to accelerometer, gyroscope, and other sensors.
+Expo FileSystem: Reading and writing to the local file system.
+Expo Secure Store: Securely storing sensitive data.
+Expo AV (Audio/Video): Handling audio and video playback and recording.
+Expo Bluetooth: Bluetooth connectivity and interaction.
+Expo Web Browser: Opening web URLs in a browser overlay.
+Expo Media Library: Interacting with the device’s photos and videos.
+Expo Background Fetch: Performing background tasks.
+Expo Permissions: Managing app permissions.
