@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { View, ScrollView, Image, Button, StyleSheet, Text } from 'react-native';
+import { View, ScrollView, Image, Button, StyleSheet, Text, Pressable } from 'react-native';
 import * as MediaLibrary from 'expo-media-library';
+import { useNavigation } from '@react-navigation/native';
 
 const MediaLibraryScreen = () => {
+    const navigation = useNavigation()
   const [media, setMedia] = useState([]);
   const [permission, setPermission] = useState(false);
 
@@ -24,12 +26,16 @@ const MediaLibraryScreen = () => {
       alert('Permission to access the gallery is required!');
     }
   };
-  console.log('permission', permission)
+
+  const navigateProfile = () => {
+    navigation.replace('Profile')    
+  }
 
   return (
     <View style={styles.container}>
       <Button title="Load Images from Gallery" onPress={loadMedia} />
       {permission ? (
+        <>
         <ScrollView style={styles.gallery}>
           {media.map((item, index) => (
             <Image
@@ -39,8 +45,17 @@ const MediaLibraryScreen = () => {
             />
           ))}
         </ScrollView>
+              <Pressable onPress={navigateProfile}>
+              <Text style={{ fontSize: 18, marginBottom: 10, color: '#003F5C', padding: 25 }}>Go To Profile</Text>
+          </Pressable>
+          </>
       ) : (
+        <>
         <Text>No access to media gallery.</Text>
+        <Pressable onPress={navigateProfile}>
+        <Text style={{ fontSize: 18, marginBottom: 10, color: '#003F5C', padding: 25 }}>Go To Profile</Text>
+    </Pressable>
+    </>
       )}
     </View>
   );

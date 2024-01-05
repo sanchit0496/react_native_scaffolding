@@ -58,6 +58,10 @@ const ProfileScreen = () => {
     navigation.replace("MediaLibraryScreen")
   }
 
+  const bgFetchNavigation = () => {
+    navigation.replace("BackgroundFetchScreen")
+  }
+
   return (
     <>
       <SafeAreaView style={{ flex: 1 }}>
@@ -112,6 +116,12 @@ const ProfileScreen = () => {
         <View>
           <Pressable onPress={mediaLibraryNavigation}>
             <Text style={styles.cameraAccess}>Media Library Screen</Text>
+          </Pressable>
+        </View>
+
+        <View>
+          <Pressable onPress={bgFetchNavigation}>
+            <Text style={styles.cameraAccess}>Background Fetch Screen</Text>
           </Pressable>
         </View>
 
