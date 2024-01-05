@@ -19,6 +19,7 @@
     "eslint-plugin-react-native": "^4.1.0",
     "expo": "~47.0.12",
     "expo-camera": "~13.1.0",
+    "expo-file-system": "^15.6.0",
     "expo-image-picker": "~14.0.2",
     "expo-location": "~15.0.1",
     "expo-sensors": "^12.5.0",
