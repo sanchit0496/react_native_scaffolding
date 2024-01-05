@@ -8,27 +8,27 @@ import {
   Platform,
   ScrollView,
   StatusBar,
-} from "react-native";
-import React, { useEffect, useState } from "react";
-import { useNavigation } from "@react-navigation/native";
-import { useSelector } from "react-redux";
-import { cleanCart } from "../CartReducer";
+} from 'react-native'
+import React, { useEffect, useState } from 'react'
+import { useNavigation } from '@react-navigation/native'
+import { useSelector } from 'react-redux'
+import { cleanCart } from '../CartReducer'
 
 const ProfileScreen = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation()
 
-  const cart = useSelector((state) => state.cart.cart);
-  console.log("cart", cart);
+  const cart = useSelector((state) => state.cart.cart)
+  console.log('cart', cart)
 
   const signOutUser = () => {
-    navigation.replace("Login");
-    dispatch(cleanCart());
-  };
+    navigation.replace('Login')
+    dispatch(cleanCart())
+  }
 
   const onPressHome = () => {
-    console.log("onPressHome");
-    navigation.navigate("Home");
-  };
+    console.log('onPressHome')
+    navigation.navigate('Home')
+  }
   return (
     <>
       <SafeAreaView style={{ flex: 1 }}>
@@ -75,25 +75,25 @@ const ProfileScreen = () => {
         </ScrollView>
       </SafeAreaView>
     </>
-  );
-};
+  )
+}
 
-export default ProfileScreen;
+export default ProfileScreen
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     marginBottom: 10,
-    backgroundColor: "white",
+    backgroundColor: 'white',
     borderRadius: 8,
     padding: 16,
-    width: "80%",
-    marginLeft: "auto",
-    marginRight: "auto",
+    width: '80%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
     ...Platform.select({
       ios: {
-        shadowColor: "#000",
+        shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.1,
         shadowRadius: 4,
@@ -111,24 +111,24 @@ const styles = StyleSheet.create({
   },
   labelContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   label: {
-    fontWeight: "bold",
+    fontWeight: 'bold',
     marginRight: 5,
-    color: "#003F5C",
+    color: '#003F5C',
   },
   regularText: {
-    marginLeft: "auto",
-    color: "#003F5C",
-    marginLeft: 80
+    marginLeft: 'auto',
+    color: '#003F5C',
+    marginLeft: 80,
   },
   topBar: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     padding: 16,
-    backgroundColor: "#fff",
-    shadowColor: "#000",
+    backgroundColor: '#fff',
+    shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
@@ -136,15 +136,15 @@ const styles = StyleSheet.create({
     marginTop: 25,
   },
   text: {
-    fontWeight: "bold",
-    color: "#003F5C",
+    fontWeight: 'bold',
+    color: '#003F5C',
   },
   yourOrder: {
-    fontWeight: "bold",
+    fontWeight: 'bold',
     fontSize: 18,
     padding: 25,
-    color: "#003F5C",
-    marginLeft: "auto",
-    marginRight: "auto",
+    color: '#003F5C',
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
-});
+})

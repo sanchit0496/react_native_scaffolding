@@ -4,7 +4,9 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "lint": "eslint .",
+    "format": "prettier --write screens/**/*.js"
   },
   "dependencies": {
     "@awrminkhodaei/react-native-horizontal-datepicker": "^0.1.6",
@@ -18,9 +20,11 @@
     "expo-splash-screen": "~0.17.5",
     "expo-status-bar": "~1.4.2",
     "firebase": "^9.15.0",
+    "lint": "^0.8.19",
     "loadash": "^1.0.0",
     "lottie-react-native": "^5.1.5",
     "moment-jalaali": "^0.9.6",
+    "prettier": "^3.1.1",
     "react": "18.1.0",
     "react-native": "0.70.5",
     "react-native-image-slider-box": "^2.0.7",
@@ -29,7 +33,9 @@
     "react-redux": "^8.0.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2"
   },
   "private": true
 }
