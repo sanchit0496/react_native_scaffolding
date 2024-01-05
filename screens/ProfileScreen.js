@@ -29,10 +29,16 @@ const ProfileScreen = () => {
     navigation.replace('Camera')    
   }
  
+  const navigateImagePicker = () => {
+    navigation.replace('ImagePicker')    
+  }
+ 
   const onPressHome = () => {
     console.log('onPressHome')
     navigation.navigate('Home')
   }
+
+  
   return (
     <>
       <SafeAreaView style={{ flex: 1 }}>
@@ -51,6 +57,12 @@ const ProfileScreen = () => {
         <View>
           <Pressable onPress={navigateCamera}>
             <Text style={styles.cameraAccess}>Camera Access</Text>
+          </Pressable>
+        </View>
+
+        <View>
+          <Pressable onPress={navigateImagePicker}>
+            <Text style={styles.cameraAccess}>Image Picker</Text>
           </Pressable>
         </View>
 
