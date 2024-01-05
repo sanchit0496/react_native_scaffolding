@@ -32,6 +32,10 @@ const ProfileScreen = () => {
   const navigateImagePicker = () => {
     navigation.replace('ImagePicker')    
   }
+
+  const navigateSensor = () => {
+    navigation.replace('SensorScreen')    
+  }
  
   const onPressHome = () => {
     console.log('onPressHome')
@@ -63,6 +67,12 @@ const ProfileScreen = () => {
         <View>
           <Pressable onPress={navigateImagePicker}>
             <Text style={styles.cameraAccess}>Image Picker</Text>
+          </Pressable>
+        </View>
+
+        <View>
+          <Pressable onPress={navigateSensor}>
+            <Text style={styles.cameraAccess}>Sensor</Text>
           </Pressable>
         </View>
 
