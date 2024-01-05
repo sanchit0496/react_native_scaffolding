@@ -17,10 +17,7 @@ import Carousel from "../components/Carousel";
 import Services from "../components/Services";
 import DressItem from "../components/DressItem";
 import { useDispatch, useSelector } from "react-redux";
-import { getProducts } from "../ProductReducer";
 import { useNavigation } from "@react-navigation/native";
-import { collection, getDoc, getDocs } from "firebase/firestore";
-import { db } from "../firebase";
 
 const HomeScreen = () => {
   const cart = useSelector((state) => state.cart.cart);
@@ -97,21 +94,9 @@ const HomeScreen = () => {
     }
   };
 
-  const product = useSelector((state) => state.product.product);
   const dispatch = useDispatch();
-  useEffect(() => {
-    if (product.length > 0) return;
 
-    const fetchProducts = async () => {
-      const colRef = collection(db, "types");
-      const docsSnap = await getDocs(colRef);
-      docsSnap.forEach((doc) => {
-        items.push(doc.data());
-      });
-      items?.map((service) => dispatch(getProducts(service)));
-    };
-    fetchProducts();
-  }, []);
+  const product = useSelector((state) => state.product.product);
 
   const [filteredProducts, setFilteredProducts] = useState([...product]);
 
@@ -122,6 +107,11 @@ const HomeScreen = () => {
     );
     setFilteredProducts(filtered);
   };
+
+  useEffect(() => {
+    setFilteredProducts([...product]);
+  }, [product]);
+  
 
   return (
     <>
@@ -155,7 +145,7 @@ const HomeScreen = () => {
         <Services />
 
         {/* Search Bar */}
-        {/* <View
+        <View
           style={{
             padding: 10,
             margin: 10,
@@ -169,10 +159,10 @@ const HomeScreen = () => {
         >
           <TextInput placeholder="Filter For Items" onChangeText={handleSearch} />
           <Feather name="search" size={24} color="#fd5c63" />
-        </View> */}
+        </View>
 
         {/* Render all the Products */}
-        {product.map((item, index) => (
+        {filteredProducts.map((item, index) => (
           <DressItem item={item} key={index} />
         ))}
 

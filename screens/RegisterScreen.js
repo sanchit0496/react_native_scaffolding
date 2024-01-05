@@ -14,9 +14,6 @@ import { Ionicons } from "@expo/vector-icons";
 import React, { useState } from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth, db } from "../firebase";
-import { doc, setDoc } from "firebase/firestore";
 
 const RegisterScreen = () => {
   const [email, setEmail] = useState("");
@@ -25,6 +22,10 @@ const RegisterScreen = () => {
   const [error, setError] = useState(null); 
 
   const navigation = useNavigation();
+
+  const handleAccountCreated = () => {
+    navigation.navigate("Login")
+  }
   
   const register = () => {
     if (email === "" || password === "" || phone === "") {
@@ -40,19 +41,15 @@ const RegisterScreen = () => {
         ],
         { cancelable: false }
       );
+    }else{
+      Alert.alert(
+        "Account Created!", "",
+        [
+          { text: "Login", onPress: () => handleAccountCreated() }
+        ],
+        { cancelable: false }
+      );
     }
-    createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
-      const user = userCredential._tokenResponse.email;
-      const myUserUid = auth.currentUser.uid;
-
-      setDoc(doc(db, "users", `${myUserUid}`), {
-        email: user,
-        phone: phone
-      })
-    }) .catch((error) => {
-        setError("Invalid Format"); 
-        console.log("error", error);
-      })
   }
 
   const image = require('../assets/login.png');

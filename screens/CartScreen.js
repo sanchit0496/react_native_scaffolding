@@ -16,8 +16,6 @@ import {
   incrementQuantity,
 } from "../CartReducer";
 import { decrementQty, incrementQty } from "../ProductReducer";
-import { addDoc, doc, getDoc, setDoc, collection } from "firebase/firestore";
-import { auth, db } from "../firebase";
 
 const CartScreen = () => {
   const cart = useSelector((state) => state.cart.cart);
@@ -29,16 +27,7 @@ const CartScreen = () => {
   const dispatch = useDispatch();
 
   const placeOrder = async () => {
-    console.log("auth", auth.currentUser.uid)
     navigation.navigate("Order");
-    dispatch(cleanCart());
-
-    const docRef = await addDoc(collection(db, "orders"), {
-      user: auth.currentUser.email,
-      orders: { ...cart },
-      pickUpDetails: route.params,
-      deliveryCharge: deliveryCharges
-    });
   };
 
   const deliveryCharges = Math.floor(Math.random() * 80) + 1;

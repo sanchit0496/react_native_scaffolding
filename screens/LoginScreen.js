@@ -13,8 +13,6 @@ import { Ionicons } from "@expo/vector-icons";
 import React, { useEffect, useState } from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase";
 
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
@@ -23,35 +21,20 @@ const LoginScreen = () => {
   const [error, setError] = useState(null); 
   const navigation = useNavigation();
 
-  useEffect(() => {
-    setLoading(true);
-    const unsubscribe = auth.onAuthStateChanged((authUser) => {
-      if (!authUser) {
-        setLoading(false);
-      }
-      if (authUser) {
-        navigation.replace("Home");
-      }
-    });
-
-    return unsubscribe;
-  }, []);
-
   const login = () => {
     setLoading(true);
     setError(null); // Reset error state before login attempt
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        console.log("userCredential", userCredential);
-      })
-      .catch((error) => {
-        setError("Incorrect Credentials"); // Set error message
-        console.log("error", error);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    
+    // Simulate login logic with dummy credentials
+    if (email === "" && password === "") {
+      console.log("Logged in with dummy credentials");
+      navigation.replace("Home"); // Navigate to Home screen on successful login
+    } else {
+      setError("Incorrect Credentials");
+      console.log("Failed login attempt");
+    }
+    
+    setLoading(false);
   };
 
   const image = require('../assets/login.png');
@@ -87,10 +70,10 @@ const LoginScreen = () => {
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <MaterialCommunityIcons name="email-outline" size={24} color="black" />
                 <TextInput
-                  placeholder="Email"
+                  placeholder="hello@gmail.com"
                   value={email}
                   onChangeText={(text) => setEmail(text)}
-                  placeholderTextColor="black"
+                  placeholderTextColor="grey"
                   style={{
                     fontSize: email ? 18 : 18,
                     borderBottomWidth: 1,
@@ -108,8 +91,8 @@ const LoginScreen = () => {
                   value={password}
                   onChangeText={(text) => setPassword(text)}
                   secureTextEntry={true}
-                  placeholder="Password"
-                  placeholderTextColor="black"
+                  placeholder="hello12345"
+                  placeholderTextColor="grey"
                   style={{
                     fontSize: password ? 18 : 18,
                     borderBottomWidth: 1,
