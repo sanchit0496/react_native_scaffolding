@@ -54,6 +54,10 @@ const ProfileScreen = () => {
     navigation.replace("WebBrowserScreen")
   }
 
+  const mediaLibraryNavigation = () => {
+    navigation.replace("MediaLibraryScreen")
+  }
+
   return (
     <>
       <SafeAreaView style={{ flex: 1 }}>
@@ -99,10 +103,15 @@ const ProfileScreen = () => {
           </Pressable>
         </View>
 
-        
         <View>
           <Pressable onPress={webBrowserNavigation}>
             <Text style={styles.cameraAccess}>Web Browser Navigation</Text>
+          </Pressable>
+        </View>
+
+        <View>
+          <Pressable onPress={mediaLibraryNavigation}>
+            <Text style={styles.cameraAccess}>Media Library Screen</Text>
           </Pressable>
         </View>
 

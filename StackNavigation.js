@@ -14,6 +14,7 @@ import SensorScreen from './screens/SensorScreen';
 import FileSystemScreen from './screens/FileSystemScreen';
 import AudioVideoScreen from './screens/AudioVideoScreen';
 import WebBrowserScreen from './screens/WebBrowserScreen';
+import MediaLibraryScreen from './screens/MediaLibraryScreen';
 
 const StackNavigator = () => {
     const Stack = createNativeStackNavigator();
@@ -33,6 +34,7 @@ const StackNavigator = () => {
         <Stack.Screen name="FileSystemScreen" component={FileSystemScreen} options={{headerShown:false}}/>
         <Stack.Screen name="AudioVideoScreen" component={AudioVideoScreen} options={{headerShown:false}}/>
         <Stack.Screen name="WebBrowserScreen" component={WebBrowserScreen} options={{headerShown:false}}/>
+        <Stack.Screen name="MediaLibraryScreen" component={MediaLibraryScreen} options={{headerShown:false}}/>
       </Stack.Navigator>
     </NavigationContainer>
   )
