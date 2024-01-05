@@ -46,6 +46,10 @@ const ProfileScreen = () => {
     navigation.replace("FileSystemScreen")
   }
 
+  const audioVideoNavigation = () => {
+    navigation.replace("AudioVideoScreen")
+  }
+
   return (
     <>
       <SafeAreaView style={{ flex: 1 }}>
@@ -82,6 +86,13 @@ const ProfileScreen = () => {
         <View>
           <Pressable onPress={fileSystemNavigation}>
             <Text style={styles.cameraAccess}>File System</Text>
+          </Pressable>
+        </View>
+
+        
+        <View>
+          <Pressable onPress={audioVideoNavigation}>
+            <Text style={styles.cameraAccess}>Audio Video</Text>
           </Pressable>
         </View>
 
