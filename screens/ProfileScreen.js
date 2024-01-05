@@ -38,7 +38,10 @@ const ProfileScreen = () => {
     navigation.navigate('Home')
   }
 
-  
+  const navigateSensor = () => {
+    navigation.replace('SensorScreen')    
+  }
+
   return (
     <>
       <SafeAreaView style={{ flex: 1 }}>
@@ -63,6 +66,12 @@ const ProfileScreen = () => {
         <View>
           <Pressable onPress={navigateImagePicker}>
             <Text style={styles.cameraAccess}>Image Picker</Text>
+          </Pressable>
+        </View>
+
+        <View>
+          <Pressable onPress={navigateSensor}>
+            <Text style={styles.cameraAccess}>Sensor</Text>
           </Pressable>
         </View>
 
