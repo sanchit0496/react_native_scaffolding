@@ -12,7 +12,7 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react", "react-native"
     ],
     "rules": {
     }
