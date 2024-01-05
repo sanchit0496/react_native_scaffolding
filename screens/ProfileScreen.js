@@ -121,6 +121,7 @@ const styles = StyleSheet.create({
   regularText: {
     marginLeft: "auto",
     color: "#003F5C",
+    marginLeft: 80
   },
   topBar: {
     flexDirection: "row",
