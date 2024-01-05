@@ -11,12 +11,12 @@ import {
 } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { cleanCart } from '../CartReducer'
 
 const ProfileScreen = () => {
   const navigation = useNavigation()
-
+  const dispatch = useDispatch()
   const cart = useSelector((state) => state.cart.cart)
   console.log('cart', cart)
 
