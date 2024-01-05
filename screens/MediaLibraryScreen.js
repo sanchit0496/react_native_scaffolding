@@ -44,10 +44,10 @@ const MediaLibraryScreen = () => {
               source={{ uri: item.uri }}
             />
           ))}
-        </ScrollView>
-              <Pressable onPress={navigateProfile}>
+          <Pressable onPress={navigateProfile}>
               <Text style={{ fontSize: 18, marginBottom: 10, color: '#003F5C', padding: 25 }}>Go To Profile</Text>
           </Pressable>
+        </ScrollView>
           </>
       ) : (
         <>

@@ -62,6 +62,10 @@ const ProfileScreen = () => {
     navigation.replace("BackgroundFetchScreen")
   }
 
+  const secureStoreNavigation = () => {
+    navigation.replace("SecureStoreScreen")
+  }
+
   return (
     <>
       <SafeAreaView style={{ flex: 1 }}>
@@ -124,6 +128,14 @@ const ProfileScreen = () => {
             <Text style={styles.cameraAccess}>Background Fetch Screen</Text>
           </Pressable>
         </View>
+
+        <View>
+          <Pressable onPress={secureStoreNavigation}>
+            <Text style={styles.cameraAccess}>Secure Store Screen</Text>
+          </Pressable>
+        </View>
+
+        
 
         <Text style={styles.yourOrder}>Your Orders</Text>
 
