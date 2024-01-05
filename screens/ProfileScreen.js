@@ -50,6 +50,10 @@ const ProfileScreen = () => {
     navigation.replace("AudioVideoScreen")
   }
 
+  const webBrowserNavigation = () => {
+    navigation.replace("WebBrowserScreen")
+  }
+
   return (
     <>
       <SafeAreaView style={{ flex: 1 }}>
@@ -89,10 +93,16 @@ const ProfileScreen = () => {
           </Pressable>
         </View>
 
-        
         <View>
           <Pressable onPress={audioVideoNavigation}>
             <Text style={styles.cameraAccess}>Audio Video</Text>
+          </Pressable>
+        </View>
+
+        
+        <View>
+          <Pressable onPress={webBrowserNavigation}>
+            <Text style={styles.cameraAccess}>Web Browser Navigation</Text>
           </Pressable>
         </View>
 
