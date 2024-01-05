@@ -25,6 +25,10 @@ const ProfileScreen = () => {
     dispatch(cleanCart())
   }
 
+  const navigateCamera = () => {
+    navigation.replace('Camera')    
+  }
+ 
   const onPressHome = () => {
     console.log('onPressHome')
     navigation.navigate('Home')
@@ -41,6 +45,12 @@ const ProfileScreen = () => {
 
           <Pressable onPress={signOutUser}>
             <Text style={styles.text}>Sign Out</Text>
+          </Pressable>
+        </View>
+
+        <View>
+          <Pressable onPress={navigateCamera}>
+            <Text style={styles.cameraAccess}>Camera Access</Text>
           </Pressable>
         </View>
 
@@ -147,4 +157,11 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     marginRight: 'auto',
   },
+  cameraAccess: {
+    fontSize: 18,
+    color: '#003F5C',
+    paddingLeft: 15,
+    paddingRight: 15,
+    paddingTop: 10
+  }
 })
