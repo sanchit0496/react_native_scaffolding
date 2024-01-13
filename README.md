@@ -6,6 +6,59 @@ Stack : Expo (FE) + Firebase (BE)
 
 ## Libraries and Their Uses
 
+## Navigation
+- **@react-navigation/native**: Navigation library for handling routing and navigation.
+- **@react-navigation/native-stack**: Manages screen transitions in a stack format.
+
+## State Management
+- **@reduxjs/toolkit**: Toolkit for efficient Redux development.
+
+## Networking
+- **axios**: HTTP client for making API requests.
+
+## Date and Time
+- **date-fns**: JavaScript library for manipulating and formatting dates.
+
+## Compatibility
+- **deprecated-react-native-prop-types**: Provides deprecated PropTypes for backward compatibility.
+
+## Expo Modules
+- **expo**: Framework for universal React apps.
+- **expo-av**: Audio and video playback.
+- **expo-camera**: Access to the device camera.
+- **expo-file-system**: Interaction with the device file system.
+- **expo-image-picker**: Image and video selection from the library or camera.
+- **expo-location**: Location services like current location and location updates.
+- **expo-media-library**: Access and manage media files.
+- **expo-sensors**: Access to device sensors like accelerometer and gyroscope.
+- **expo-splash-screen**: Management of the splash screen.
+- **expo-status-bar**: Control over the status bar appearance.
+- **expo-web-browser**: Opening web content in a browser.
+
+## Firebase
+- **firebase**: Platform for developing apps with backend services.
+
+## UI and Animation
+- **lottie-react-native**: Rendering animations in React Native.
+- **react-native-image-slider-box**: Customizable image slider component.
+
+## Utilities
+- **moment-jalaali**: Jalaali calendar support for moment.js.
+
+## Core React Libraries
+- **react**: Library for building user interfaces.
+- **react-native**: Framework for building native apps.
+
+## UI Utilities
+- **react-native-safe-area-context**: Handling safe area insets.
+- **react-native-screens**: Native navigation components.
+
+## Redux
+- **react-redux**: React bindings for Redux.
+
+## Background Tasks
+- **expo-background-fetch**: Background task execution.
+- **expo-secure-store**: Encrypt and store key-value pairs.
 
 ## Running the App
 
