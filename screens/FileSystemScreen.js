@@ -38,7 +38,7 @@ const FileSystemScreen = () => {
   }
 
   const navigateProfile = () => {
-    navigation.replace('Profile')    
+    navigation.replace('Profile')
   }
 
   return (
@@ -58,8 +58,17 @@ const FileSystemScreen = () => {
       </View>
       {fileContent ? <Text>File Content: {fileContent}</Text> : null}
       <Pressable onPress={navigateProfile}>
-            <Text style={{ fontSize: 18, marginBottom: 10, color: '#003F5C', padding: 25 }}>Go To Profile</Text>
-        </Pressable>
+        <Text
+          style={{
+            fontSize: 18,
+            marginBottom: 10,
+            color: '#003F5C',
+            padding: 25,
+          }}
+        >
+          Go To Profile
+        </Text>
+      </Pressable>
     </View>
   )
 }

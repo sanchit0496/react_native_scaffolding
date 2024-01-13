@@ -13,8 +13,10 @@ import { Ionicons } from '@expo/vector-icons'
 import React, { useEffect, useState } from 'react'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native'
+const image = require('../assets/login.png')
 
 const LoginScreen = () => {
+
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
@@ -26,7 +28,7 @@ const LoginScreen = () => {
     setError(null) // Reset error state before login attempt
 
     // Simulate login logic with dummy credentials
-    if (email === '' && password === '') {
+    if (email === 'hello@gmail.com' && password === 'hello12345') {
       console.log('Logged in with dummy credentials')
       navigation.replace('Home') // Navigate to Home screen on successful login
     } else {
@@ -37,7 +39,6 @@ const LoginScreen = () => {
     setLoading(false)
   }
 
-  const image = require('../assets/login.png')
 
   return (
     <SafeAreaView

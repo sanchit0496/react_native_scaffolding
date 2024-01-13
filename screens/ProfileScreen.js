@@ -26,44 +26,44 @@ const ProfileScreen = () => {
   }
 
   const navigateCamera = () => {
-    navigation.replace('Camera')    
+    navigation.replace('Camera')
   }
- 
+
   const navigateImagePicker = () => {
-    navigation.replace('ImagePicker')    
+    navigation.replace('ImagePicker')
   }
- 
+
   const onPressHome = () => {
     console.log('onPressHome')
     navigation.navigate('Home')
   }
 
   const navigateSensor = () => {
-    navigation.replace('SensorScreen')    
+    navigation.replace('SensorScreen')
   }
 
   const fileSystemNavigation = () => {
-    navigation.replace("FileSystemScreen")
+    navigation.replace('FileSystemScreen')
   }
 
   const audioVideoNavigation = () => {
-    navigation.replace("AudioVideoScreen")
+    navigation.replace('AudioVideoScreen')
   }
 
   const webBrowserNavigation = () => {
-    navigation.replace("WebBrowserScreen")
+    navigation.replace('WebBrowserScreen')
   }
 
   const mediaLibraryNavigation = () => {
-    navigation.replace("MediaLibraryScreen")
+    navigation.replace('MediaLibraryScreen')
   }
 
   const bgFetchNavigation = () => {
-    navigation.replace("BackgroundFetchScreen")
+    navigation.replace('BackgroundFetchScreen')
   }
 
   const secureStoreNavigation = () => {
-    navigation.replace("SecureStoreScreen")
+    navigation.replace('SecureStoreScreen')
   }
 
   return (
@@ -134,8 +134,6 @@ const ProfileScreen = () => {
             <Text style={styles.cameraAccess}>Secure Store Screen</Text>
           </Pressable>
         </View>
-
-        
 
         <Text style={styles.yourOrder}>Your Orders</Text>
 
@@ -245,6 +243,6 @@ const styles = StyleSheet.create({
     color: '#003F5C',
     paddingLeft: 15,
     paddingRight: 15,
-    paddingTop: 10
-  }
+    paddingTop: 10,
+  },
 })
