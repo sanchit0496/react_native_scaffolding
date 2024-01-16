@@ -27,7 +27,7 @@
         "android.permission.ACCESS_FINE_LOCATION",
         "android.permission.FOREGROUND_SERVICE"
       ],
-      "package": "com.sanchit0496.reactnative_firebase",
+      "package": "placeholder",
       "googleServicesFile": "./google-services.json"
     },
     "web": {
@@ -43,7 +43,7 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "9e7b6393-d2a0-43d5-b0eb-f7630d6b0791"
+        "projectId": "placeholder"
       }
     }
   }
