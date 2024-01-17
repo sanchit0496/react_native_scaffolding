@@ -4,7 +4,7 @@ This app allows users to book services. Upon logging in or creating an account w
 
 Stack : Expo (Frontend) + Firebase (Backend)
 
-## Libraries and Their Uses
+## Libraries and Their Usage
 
 ### Navigation
 - **@react-navigation/native**: For routing and navigation.
