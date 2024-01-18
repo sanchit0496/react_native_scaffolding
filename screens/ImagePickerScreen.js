@@ -44,7 +44,7 @@ const ImagePickerScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Button title="Pick an image from camera roll" onPress={pickImage} />
+      <Button title="Pick an image from your camera roll" onPress={pickImage} />
       {image && <Image source={{ uri: image }} style={styles.image} />}
       <Pressable onPress={navigateProfile}>
         <Text
