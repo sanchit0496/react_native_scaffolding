@@ -8,7 +8,7 @@ Stack : Expo (Frontend) + Firebase (Backend)
 
 ### Navigation
 - **@react-navigation/native**: For routing and navigation.
-- **@react-navigation/native-stack**: Manages screen transitions.
+- **@react-navigation/native-stack**: Manages the screen transitions.
 
 ### State Management
 - **@reduxjs/toolkit**: Efficient Redux development toolkit.
