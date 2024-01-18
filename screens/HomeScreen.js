@@ -65,7 +65,7 @@ const HomeScreen = () => {
     if (status !== 'granted') {
       Alert.alert(
         'Permission denied',
-        'Allow the app to use the location services',
+        'Allow the app to use the location services of your device',
         [
           {
             text: 'Cancel',
