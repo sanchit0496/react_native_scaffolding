@@ -41,7 +41,7 @@ const MediaLibraryScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Button title="Load Images from Gallery" onPress={loadMedia} />
+      <Button title="Load Images From The Gallery" onPress={loadMedia} />
       {permission ? (
         <>
           <ScrollView style={styles.gallery}>
