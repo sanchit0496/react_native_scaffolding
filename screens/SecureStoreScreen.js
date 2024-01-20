@@ -55,7 +55,7 @@ const SecureStoreScreen = () => {
             padding: 25,
           }}
         >
-          Go To Profile
+          Visit Profile
         </Text>
       </Pressable>
     </View>
