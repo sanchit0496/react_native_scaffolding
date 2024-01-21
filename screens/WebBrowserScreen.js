@@ -17,7 +17,7 @@ const WebBrowserScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Button title="Open Web Page" onPress={openWebPage} />
+      <Button title="Open Web Page On Your Device" onPress={openWebPage} />
       <Pressable onPress={navigateProfile}>
         <Text
           style={{
