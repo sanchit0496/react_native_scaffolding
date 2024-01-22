@@ -32,18 +32,18 @@ const BackgroundFetchScreen = () => {
         switch (status) {
           case BackgroundFetch.Status.Restricted:
           case BackgroundFetch.Status.Denied:
-            console.log('Background fetch is disabled')
+            console.log('Background Fetch is disabled')
             break
           default: {
             await BackgroundFetch.registerTaskAsync(BACKGROUND_FETCH_TASK, {
               minimumInterval: 60, // The task runs every 60 seconds
             })
-            console.log('Background fetch task registered')
-            setStatus('Background fetch task registered')
+            console.log('Background Fetch task registered')
+            setStatus('Background Fetch task registered')
           }
         }
       } catch (error) {
-        console.error('Error registering background fetch task:', error)
+        console.error('Error registering background Fetch task:', error)
       }
     }
 
