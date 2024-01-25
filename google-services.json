@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "903698690752",
+    "project_id": "native-notification-4cdb4",
+    "storage_bucket": "native-notification-4cdb4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:903698690752:android:1a6d323c72673582027325",
+        "android_client_info": {
+          "package_name": "com.sanchit0496.reactnative_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANLfgz2f-avsKGH7tiHgS4VnpHp7M4xdg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

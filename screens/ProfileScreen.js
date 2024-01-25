@@ -65,6 +65,10 @@ const ProfileScreen = () => {
   const secureStoreNavigation = () => {
     navigation.replace('SecureStoreScreen')
   }
+  
+  const notificationNavigation = () => {
+    navigation.replace('NotificationScreen')
+  }
 
   return (
     <>
@@ -134,6 +138,13 @@ const ProfileScreen = () => {
             <Text style={styles.cameraAccess}>Secure Store Screen</Text>
           </Pressable>
         </View>
+
+        <View>
+          <Pressable onPress={notificationNavigation}>
+            <Text style={styles.cameraAccess}>Notification Screen</Text>
+          </Pressable>
+        </View>
+      
 
         <Text style={styles.yourOrder}>Your Orders</Text>
 

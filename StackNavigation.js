@@ -17,6 +17,7 @@ import WebBrowserScreen from './screens/WebBrowserScreen';
 import MediaLibraryScreen from './screens/MediaLibraryScreen';
 import BackgroundFetchScreen from './screens/BackgroundFetchScreen';
 import SecureStoreScreen from './screens/SecureStoreScreen';
+import NotificationScreen from './screens/NotificationScreen'
 
 const StackNavigator = () => {
     const Stack = createNativeStackNavigator();
@@ -39,6 +40,7 @@ const StackNavigator = () => {
         <Stack.Screen name="MediaLibraryScreen" component={MediaLibraryScreen} options={{headerShown:false}}/>
         <Stack.Screen name="BackgroundFetchScreen" component={BackgroundFetchScreen} options={{headerShown:false}}/>
         <Stack.Screen name="SecureStoreScreen" component={SecureStoreScreen} options={{headerShown:false}}/>
+        <Stack.Screen name="NotificationScreen" component={NotificationScreen} options={{headerShown:false}}/>
       </Stack.Navigator>
     </NavigationContainer>
   )

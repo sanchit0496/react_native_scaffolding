@@ -17,6 +17,7 @@ import Services from '../components/Services'
 import DressItem from '../components/DressItem'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigation } from '@react-navigation/native'
+import { usePushNotifications } from "../useNotifications";
 
 const HomeScreen = () => {
   const cart = useSelector((state) => state.cart.cart)
@@ -25,6 +26,9 @@ const HomeScreen = () => {
     .map((item) => item.quantity * item.price)
     .reduce((curr, prev) => curr + prev, 0)
   const navigation = useNavigation()
+  const { expoPushToken } = usePushNotifications();
+
+  console.log('expoPushToken', expoPushToken);
 
   const [displayCurrentAddress, setDisplayCurrentAddress] = useState('Location')
   const [locationServicesEnabled, setLocationServicesEnabled] = useState(false)

@@ -28,7 +28,7 @@ const LoginScreen = () => {
     setError(null) // Reset error state before login attempt
 
     // Simulate login logic with dummy credentials
-    if (email === 'hello@gmail.com' && password === 'hello12345') {
+    if (email === '' && password === '') {
       console.log('Logged in with dummy credentials')
       navigation.replace('Home') // Navigate to Home screen on successful login
     } else {
