@@ -101,10 +101,12 @@ To run this app, follow these steps:
 Please note that modifying files in `node_modules` is generally not recommended as these changes can be overwritten by package updates. A more sustainable approach would be to fork the necessary libraries and make your changes there, or find alternative solutions that do not require altering `node_modules` directly.
 
 ## Additional Information
-
-(You can add any additional information or instructions specific to your project here.)
-
 For more detailed information about each library or tool, you can visit their respective documentation or GitHub repository.
 
+## Useful Links
 
+- **Setup Firebase and Expo Account to leverage notification system into application**:
+https://docs.expo.dev/push-notifications/push-notifications-setup/#get-credentials-for-development-builds
 
+- **For Gradle and Kotlin Error**:
+https://stackoverflow.com/questions/76862279/eas-build-fails-with-error-execution-failed-for-task-expo-splash-screencompil
