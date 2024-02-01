@@ -215,7 +215,7 @@ const RegisterScreen = () => {
                   fontWeight: '500',
                 }}
               >
-                Sign In To Existing Account
+                Sign In To An Existing Account
               </Text>
             </Pressable>
           </View>
