@@ -94,7 +94,7 @@ const HomeScreen = () => {
           }
         }
       } catch (error) {
-        console.error('Error fetching current location:', error)
+        console.error('Error fetching the current location:', error)
       }
     }
   }
