@@ -99,7 +99,7 @@ const ProfileScreen = () => {
 
         <View>
           <Pressable onPress={navigateSensor}>
-            <Text style={styles.cameraAccess}>Sensor</Text>
+            <Text style={styles.cameraAccess}>Sensor Screen</Text>
           </Pressable>
         </View>
 
