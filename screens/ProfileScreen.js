@@ -111,7 +111,7 @@ const ProfileScreen = () => {
 
         <View>
           <Pressable onPress={audioVideoNavigation}>
-            <Text style={styles.cameraAccess}>Audio Video</Text>
+            <Text style={styles.cameraAccess}>Audio And Video Screen</Text>
           </Pressable>
         </View>
 
