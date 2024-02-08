@@ -77,7 +77,7 @@ const ProfileScreen = () => {
 
         <View style={styles.topBar}>
           <Pressable style={{ marginRight: 10 }} onPress={onPressHome}>
-            <Text style={styles.text}>HomeScreen</Text>
+            <Text style={styles.text}>Home Screen</Text>
           </Pressable>
 
           <Pressable onPress={signOutUser}>
