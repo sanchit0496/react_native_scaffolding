@@ -146,7 +146,7 @@ const ProfileScreen = () => {
         </View>
       
 
-        <Text style={styles.yourOrder}>Your Orders</Text>
+        <Text style={styles.yourOrder}>Your Orders:</Text>
 
         <ScrollView>
           <View>
