@@ -1,31 +1,38 @@
-import React, { useState } from 'react';
-import { View, Button, TextInput, Text, StyleSheet, Pressable } from 'react-native';
-import * as SecureStore from 'expo-secure-store';
-import { useNavigation } from '@react-navigation/native';
+import React, { useState } from 'react'
+import {
+  View,
+  Button,
+  TextInput,
+  Text,
+  StyleSheet,
+  Pressable,
+} from 'react-native'
+import * as SecureStore from 'expo-secure-store'
+import { useNavigation } from '@react-navigation/native'
 
 const SecureStoreScreen = () => {
-  const [inputValue, setInputValue] = useState('');
-  const [storedValue, setStoredValue] = useState('');
+  const [inputValue, setInputValue] = useState('')
+  const [storedValue, setStoredValue] = useState('')
   const navigation = useNavigation()
 
   // Function to save the value
   const saveValue = async () => {
-    await SecureStore.setItemAsync('myKey', inputValue);
-    alert('Value stored successfully!');
-  };
+    await SecureStore.setItemAsync('myKey', inputValue)
+    alert('Value stored successfully!')
+  }
 
   // Function to retrieve the value
   const getValue = async () => {
-    let result = await SecureStore.getItemAsync('myKey');
+    let result = await SecureStore.getItemAsync('myKey')
     if (result) {
-      setStoredValue(result);
+      setStoredValue(result)
     } else {
-      alert('No values stored under that key.');
+      alert('No values stored under that key.')
     }
-  };
+  }
 
   const navigateProfile = () => {
-    navigation.replace('Profile')    
+    navigation.replace('Profile')
   }
 
   return (
@@ -40,11 +47,20 @@ const SecureStoreScreen = () => {
       <Button title="Retrieve from Secure Store" onPress={getValue} />
       {storedValue ? <Text>Stored Value: {storedValue}</Text> : null}
       <Pressable onPress={navigateProfile}>
-              <Text style={{ fontSize: 18, marginBottom: 10, color: '#003F5C', padding: 25 }}>Go To Profile</Text>
-          </Pressable>
+        <Text
+          style={{
+            fontSize: 18,
+            marginBottom: 10,
+            color: '#003F5C',
+            padding: 25,
+          }}
+        >
+          Go To Profile
+        </Text>
+      </Pressable>
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -59,7 +75,7 @@ const styles = StyleSheet.create({
     margin: 12,
     borderWidth: 1,
     padding: 10,
-  }
-});
+  },
+})
 
-export default SecureStoreScreen;
+export default SecureStoreScreen

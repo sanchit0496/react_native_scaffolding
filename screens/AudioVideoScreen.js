@@ -1,43 +1,43 @@
-import React, { useState, useRef } from 'react';
-import { View, Button, StyleSheet, Pressable, Text } from 'react-native';
-import { Video } from 'expo-av';
-import { Audio } from 'expo-av';
-import { useNavigation } from '@react-navigation/native';
+import React, { useState, useRef } from 'react'
+import { View, Button, StyleSheet, Pressable, Text } from 'react-native'
+import { Video } from 'expo-av'
+import { Audio } from 'expo-av'
+import { useNavigation } from '@react-navigation/native'
 
 const AudioVideo = () => {
-    const navigation = useNavigation()
-  const videoRef = useRef(null);
-  const [audio, setAudio] = useState(null);
+  const navigation = useNavigation()
+  const videoRef = useRef(null)
+  const [audio, setAudio] = useState(null)
 
   // Function to load and play video
   const playVideo = async () => {
     await videoRef.current.loadAsync(
       { uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' },
       {},
-      true
-    );
-  };
+      true,
+    )
+  }
 
   // Function to load and play audio
   const playAudio = async () => {
-    const { sound } = await Audio.Sound.createAsync(
-      { uri: 'https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3' }
-    );
-    setAudio(sound);
-    await sound.playAsync();
-  };
+    const { sound } = await Audio.Sound.createAsync({
+      uri: 'https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3',
+    })
+    setAudio(sound)
+    await sound.playAsync()
+  }
 
   // Function to stop the audio
   const stopAudio = async () => {
     if (audio) {
-      await audio.stopAsync();
-      await audio.unloadAsync();
-      setAudio(null);
+      await audio.stopAsync()
+      await audio.unloadAsync()
+      setAudio(null)
     }
-  };
+  }
 
   const navigateProfile = () => {
-    navigation.replace('Profile')    
+    navigation.replace('Profile')
   }
 
   return (
@@ -57,12 +57,21 @@ const AudioVideo = () => {
         <Button title="Play Audio" onPress={playAudio} />
         <Button title="Stop Audio" onPress={stopAudio} />
       </View>
-         <Pressable onPress={navigateProfile}>
-            <Text style={{ fontSize: 18, marginBottom: 10, color: '#003F5C', padding: 25 }}>Go To Profile</Text>
-        </Pressable>
+      <Pressable onPress={navigateProfile}>
+        <Text
+          style={{
+            fontSize: 18,
+            marginBottom: 10,
+            color: '#003F5C',
+            padding: 25,
+          }}
+        >
+          Go To Profile
+        </Text>
+      </Pressable>
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -76,7 +85,7 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     marginVertical: 10,
-  }
-});
+  },
+})
 
-export default AudioVideo;
+export default AudioVideo

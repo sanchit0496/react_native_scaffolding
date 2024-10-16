@@ -1,7 +1,7 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, LogBox } from "react-native";
+import { LogBox } from "react-native";
 import { Provider } from "react-redux";
-import HomeScreen from "./screens/HomeScreen";
 import StackNavigator from "./StackNavigation";
 import store from "./store";
 
@@ -17,10 +17,3 @@ export default function App() {
     </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-  },
-});

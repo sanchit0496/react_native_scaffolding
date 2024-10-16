@@ -14,14 +14,14 @@ import { Ionicons } from '@expo/vector-icons'
 import React, { useState } from 'react'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native'
-import { format, parse } from 'date-fns';
+import { format, parse } from 'date-fns'
 
 const RegisterScreen = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [phone, setPhone] = useState('')
   const [error, setError] = useState(null)
-  const [dateOfBirth, setDateOfBirth] = useState('');
+  const [dateOfBirth, setDateOfBirth] = useState('')
 
   const navigation = useNavigation()
 
@@ -44,8 +44,11 @@ const RegisterScreen = () => {
         { cancelable: false },
       )
     } else {
-      const formattedDate = format(parse(dateOfBirth, 'MM/dd/yyyy', new Date()), 'MMMM do, yyyy');
-      console.log('Formatted Date of Birth:', formattedDate);
+      const formattedDate = format(
+        parse(dateOfBirth, 'MM/dd/yyyy', new Date()),
+        'MMMM do, yyyy',
+      )
+      console.log('Formatted Date of Birth:', formattedDate)
 
       Alert.alert(
         'Account Created!',
@@ -132,26 +135,22 @@ const RegisterScreen = () => {
             </View>
 
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-            <MaterialCommunityIcons
-                name="cake"
-                size={24}
-                color="black"
+              <MaterialCommunityIcons name="cake" size={24} color="black" />
+              <TextInput
+                value={dateOfBirth}
+                onChangeText={(text) => setDateOfBirth(text)}
+                placeholder="Date of Birth (MM/DD/YYYY)"
+                placeholderTextColor="black"
+                style={{
+                  fontSize: 18,
+                  borderBottomWidth: 1,
+                  borderBottomColor: 'gray',
+                  marginLeft: 13,
+                  width: 300,
+                  marginVertical: 10,
+                }}
               />
-            <TextInput
-              value={dateOfBirth}
-              onChangeText={(text) => setDateOfBirth(text)}
-              placeholder="Date of Birth (MM/DD/YYYY)"
-              placeholderTextColor="black"
-              style={{
-                fontSize: 18,
-                borderBottomWidth: 1,
-                borderBottomColor: 'gray',
-                marginLeft: 13,
-                width: 300,
-                marginVertical: 10,
-              }}
-            />
-          </View>
+            </View>
 
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
               <Feather name="phone" size={24} color="black" />
